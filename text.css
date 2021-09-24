@@ -1,0 +1,811 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+nav{
+  background: black;
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
+}
+nav:after{
+  content: '';
+  clear: both;
+  display: table;
+}
+nav .logo{
+  float: left;
+  color: white;
+  background-image: cover;
+  padding-left: 0px;
+}
+nav ul{
+  float: right;
+  margin-right: 40px;
+  list-style: none;
+  position: relative;
+}
+nav ul li{
+  float: left;
+  display: inline-block;
+  background: black;
+  margin: 0 5px;
+}
+nav ul li a{
+  color: white;
+  line-height: 70px;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 8px 15px;
+}
+nav ul li a:hover{
+  color: cyan;
+  border-radius: 5px;
+  box-shadow:  0 0 5px #33ffff,
+               0 0 10px #66ffff;
+}
+nav ul ul li a:hover{
+  box-shadow: none;
+}
+nav ul ul{
+  position: absolute;
+  top: 90px;
+  border-top: 3px solid cyan;
+  opacity: 0;
+  visibility: hidden;
+  transition: top .3s;
+}
+nav ul ul ul{
+  border-top: none;
+}
+nav ul li:hover > ul{
+  top: 70px;
+  opacity: 1;
+  visibility: visible;
+}
+nav ul ul li{
+  position: relative;
+  margin: 0px;
+  width: 150px;
+  float: none;
+  display: list-item;
+  border-bottom: 1px solid rgba(0,0,0,0.3);
+}
+nav ul ul li a{
+  line-height: 50px;
+}
+nav ul ul ul li{
+  position: relative;
+  top: -60px;
+  left: 150px;
+}
+.show,.icon,input{
+  display: none;
+}
+.fa-plus{
+  font-size: 15px;
+  margin-left: 40px;
+}
+@media all and (max-width: 968px) {
+  nav ul{
+    margin-right: 0px;
+    float: left;
+  }
+  nav .logo{
+    padding-left: 30px;
+    width: 100%;
+  }
+  .show + a, ul{
+    display: none;
+  }
+  nav ul li,nav ul ul li{
+    display: block;
+    width: 100%;
+  }
+  nav ul li a:hover{
+    box-shadow: none;
+  }
+  .show{
+    display: block;
+    color: white;
+    font-size: 18px;
+    padding: 0 20px;
+    line-height: 70px;
+    cursor: pointer;
+  }
+  .show:hover{
+    color: cyan;
+  }
+  .icon{
+    display: block;
+    color: white;
+    position: absolute;
+    top: 0;
+    right: 40px;
+    line-height: 70px;
+    cursor: pointer;
+    font-size: 25px;
+  }
+  nav ul ul{
+    top: 70px;
+    border-top: 0px;
+    float: none;
+    position: static;
+    display: none;
+    opacity: 1;
+    visibility: visible;
+  }
+  nav ul ul a{
+    padding-left: 40px;
+  }
+  nav ul ul ul a{
+    padding-left: 80px;
+  }
+  nav ul ul ul li{
+    position: static;
+  }
+  [id^=btn]:checked + ul{
+    display: block;
+  }
+  nav ul ul li{
+    border-bottom: 0px;
+  }
+  span.cancel:before{
+    content: '\f00d';
+  }
+}
+.content{
+  z-index: -1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+}
+header{
+  font-size: 35px;
+  font-weight: 600;
+  padding: 10px 0;
+}
+.head{
+    width: 100%;
+    height: 600px;
+    padding-right: 0px;
+}
+.head img{
+    width: 100%;
+    height: 100%;
+    margin-top: 80px;
+    z-index: -999;
+}
+.head .home{
+    position: relative;
+    font-size: 50px;
+    font-weight: bold;
+    color: #56ffff;
+    margin-top: -250px;
+    text-align: center;
+
+}
+.home span{
+  font-family: serif;
+  position: relative;
+  display: inline-block;
+  color: #56ffff;
+  animation: animated 1s ease-in-out infinite;
+  animation-delay: calc(0.1s *  var(--i));
+}
+@keyframes animated
+{
+  0%{
+    transform: translateY(0px);
+    color: red;
+  }
+  20%{
+    transform: translateY(-20%);
+    color: #007fff;
+  }
+  40%,100%{
+    transform: translateY(0px);
+    color: yellow;
+}
+}
+.head > .chuabutton{
+  padding-left: 500px;
+}
+button.btn{
+  margin-left: 20px;
+  border-radius: 5px;
+  width: 100px;
+  height: 30px;
+  align-items: center;
+}
+.title{
+ padding-left: 20px;
+ font-weight: bold;
+ font-size: 20px;
+ margin-top: 160px;
+}
+section {
+  width: 100%;
+  height: 100vh;
+  background: url(lamborghini/anh-lamborghini-dep_062148757.jpg);
+  background-size: cover;
+  margin-top: 110px;
+  background-repeat: no-repeat;
+}
+section .leftBox{
+  width: 50%;
+  height: 100%;
+  float: left;
+  box-sizing: border-box;
+  animation: left-in 0.5s ease-in forwards;
+  animation-delay: 1s;
+  opacity: 0;
+}
+section .leftBox .content1{
+  color: #fff;
+  background: rgba(0,0,0,.5);
+  padding: 40px;
+  transition: .5s;
+}
+section .leftBox .content1:hover{
+  background: #e91e63;
+}
+section .leftBox .content1 h1{
+  margin: 0;
+  padding: 0;
+  font-size: 50px;
+  text-transform: uppercase;
+}
+section .leftBox .content1 p{
+  margin: 10px 0 0;
+  padding: 0;
+}
+section .events{
+  position: relative;
+  width: 50%;
+  height: 100%;
+  background: rgba(0,0,0,.5);
+  float: right;
+  box-sizing: border-box;
+  animation: fade-in 0.5s ease-in forwards;
+  animation-delay: 2s;
+  opacity: 0;
+}
+section .events ul{
+  position: absolute;
+  top: 50%;
+  margin: 0;
+  padding: 40px;
+  transform: translateY(-50%);
+}
+section .events ul li{
+  list-style: none;
+  background: #fff;
+  box-sizing: border-box;
+  height: 190px;
+  margin: 15px 0;
+}
+section .events ul li .time{
+  position: relative;
+  padding: 20px;
+  background: #262626;
+  box-sizing: border-box;
+  width: 30%;
+  height: 100%;
+  float: left;
+  text-align: center;
+  transition: .5s;
+}
+section .events ul li:hover .time{
+  background: #e91e63;
+}
+section .events ul li .time h2{
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  color: #fff;
+  font-size: 60px;
+}
+section .events ul li .time h2 span{
+  font-size: 30px;
+}
+section .events ul li .details{
+  padding: 20px;
+  background: #fff;
+  box-sizing: border-box;
+  width: 70%;
+  height: 100%;
+  float: left;
+}
+section .events ul li .details h3{
+  position: relative;
+  margin: 10px 0 0;
+  padding: 0;
+  font-size: 16px;
+}
+section .events ul li .details a{
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding:10px 15px;
+  border:2px solid #262626;
+  margin-top: 9px;
+  font-size: 18px;
+  transition: .5s;
+}
+section .events ul li .details a:hover{
+  background: #e91e63;
+  color: #fff;
+  border-color: #e91e63;
+}
+.model{
+  margin-top: 20px;
+  margin-bottom: 0px;
+  text-transform: uppercase;
+  font-size: 30px;
+  font-weight: bold;
+  margin-left: 20px;
+}
+.heart-btn{
+  position: absolute;
+  top: 30%;
+  left: 90%;
+  transform: translate(-50%,-50%);
+}
+.content{
+  padding: 13px 16px;
+  display: flex;
+  border: 2px solid #eae2e1;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.content.heart-active{
+  border-color: #f9b9c4;
+  background: #fbd0d8;
+}
+.heart{
+  position: absolute;
+  background: url("lamborghini/img.png") no-repeat;
+  background-position: left;
+  background-size: 2900%;
+  height: 90px;
+  width: 90px;
+  top: 50%;
+  left: 21%;
+  transform: translate(-50%,-50%);
+}
+.text{
+  font-size: 21px;
+  margin-left: 30px;
+  color: grey;
+  font-family: 'Montserrat',sans-serif;
+}
+.numb:before{
+  content: '';
+  font-size: 21px;
+  margin-left: 7px;
+  font-weight: 600;
+  color: #9C9496;
+  font-family: sans-serif;
+}
+.numb.heart-active:before{
+  content: '1';
+  color: #000;
+}
+.text.heart-active{
+  color: #000;
+}
+.heart.heart-active{
+  animation: animate .8s steps(28) 1;
+  background-position: right;
+}
+@keyframes animate {
+  0%{
+    background-position: left;
+  }
+  100%{
+    background-position: right;
+  }
+}
+.main2{
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background: #222;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 20px;
+}
+.main2:before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #ff2562;
+  clip-path: polygon(54% 0,100% 0,100% 100%,84% 100%);
+  animation: fade-in 0.5s ease-in forwards;
+  animation-delay: 2.5s;
+  opacity: 0;
+}
+.main2 .content2{
+  position: relative;
+  padding: 100px 50px 100px 150px;
+  box-sizing: border-box;
+  animation: left-in 0.5s ease-in forwards;
+  animation-delay: 3s;
+  opacity: 0;
+}
+.main2 .content2 h2{
+  color: #fff;
+  font-size: 3em;
+  font-weight: 800;
+}
+.main2 .content2 p{
+  color: #fff;
+  font-size: 1.2em;
+}
+.main2 .content2 a{
+  position: relative;
+  display: inline-block;
+  padding: 15px 30px;
+  margin-top: 20px;
+  background: #ff2562;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 0.95em;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-decoration: none;
+}
+.main2 .content2 a:hover{
+   background:#fc00ff;
+}
+.main2 .imgbox{
+  position: relative;
+  padding-right: 100px;
+  animation: left-in 0.5s ease-in forwards;
+  animation-delay: 3s;
+  opacity: 0;
+}
+.main2 .imgbox img{
+  max-width: 500px;
+  animation: fade-in 0.5s ease-in forwards;
+  animation-delay: 3.7s;
+  opacity: 0;
+  max-height: 400px;
+  border-radius: 50%;
+  transition: .5s ease-in;
+}
+.main2 .imgbox img:hover{
+  transition: 1s;
+  transform: translateY(0px) rotateY(180deg) scale(1.1)
+}
+@keyframes fade-in{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+@keyframes left-in{
+  0%{
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+  100%{
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+footer{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 100px;
+  z-index: 1000;
+}
+.tieudevideo{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-size: 30px;
+  font-weight: bold;
+  margin-left: 20px;
+}
+.banner{
+  margin-top: 20px;
+  position: relative;
+  width:85.2%;
+  min-height: 100vh;
+  padding: 0 100px;
+  background: url(lamborghini/anh7.jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+.banner2{
+  margin-top: 20px;
+  position: relative;
+  width:85.2%;
+  min-height: 100vh;
+  padding: 0 100px;
+  background: url(lamborghini/anh9.jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+.banner3{
+  margin-top: 20px;
+  position: relative;
+  width:85.2%;
+  min-height: 100vh;
+  padding: 0 100px;
+  background: url(lamborghini/veneno1.jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+
+.banner .content2{
+  max-width: 550px;
+}
+.banner .content2 h2{
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 2em;
+  letter-spacing: 0.1em;
+  color:#fff;
+}
+.banner .content2 p{
+  font-size: 1.2em;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  line-height: 1.5em;
+  color:#fff;
+  margin: 15px 0 35px;
+}
+.banner2 .content2{
+  max-width: 550px;
+}
+.banner2 .content2 h2{
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 2em;
+  letter-spacing: 0.1em;
+  color:#fff;
+}
+.banner2 .content2 p{
+  font-size: 1.2em;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  line-height: 1.5em;
+  color:#fff;
+  margin: 15px 0 35px;
+}
+.banner3 .content2{
+  max-width: 550px;
+}
+.banner3 .content2 h2{
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 2em;
+  letter-spacing: 0.1em;
+  color:#fff;
+}
+.banner3 .content2 p{
+  font-size: 1.2em;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  line-height: 1.5em;
+  color:#fff;
+  margin: 15px 0 35px;
+}
+.play{
+  position: relative;
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-size: 1.2em;
+}
+.play img{
+  margin-right: 10px;
+  max-width: 50px;
+}
+.sci{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+
+}
+.sci li.face{
+  list-style: none;
+}
+.sci li.face a{
+  text-decoration: none;
+}
+.sci li.face a i{
+  filter: invert(1);
+  transform: scale(0.6);
+  font-size: 30px;
+}
+.slide img{
+  position: absolute;
+  bottom: 50px;
+  left: calc(50%-250px/2);
+  width: 250px;
+  height: 150px;
+  background-size: cover;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.slide img:hover{
+  border-radius: 50%;
+  transition: 1s;
+}
+.trailer{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 10000;
+  background: rgba(0,0,0,0.95);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+}
+.trailer.active{
+  visibility: visible;
+  opacity: 1;
+}
+.trailer video{
+  position: relative;
+  max-width:90%;
+  outline: none;
+  cursor: pointer;
+  max-height: 100%;
+}
+.trailer i{
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  color: #fff;
+
+}
+.team-section{
+  background: #f1f1f1;
+  text-align: center;
+}
+.inner-width1{
+  max-width: 1200px;
+  margin:auto;
+  padding: 40px;
+  color: #333;
+  overflow: hidden;
+}
+.team-section h1{
+  font-size: 20px;
+  text-transform: uppercase;
+  display: inline-block;
+  border-bottom: 4px solid;
+  padding-bottom: 10px;
+}
+.pe{
+  float: left;
+  width: calc(100%/3);
+  overflow: hidden;
+  padding: 40px 0;
+  transition: 0.4s;
+}
+.pe:hover{
+  background: #ddd;
+  transform:  translateY(0px) rotateY(360deg);
+  transition: 1s;
+  border-radius: 50%;
+}
+.pe img{
+  width: 120px;
+  height: 120px;
+}
+.p-name{
+  margin:16px 0;
+  text-transform: uppercase;
+}
+.p-des{
+  font-size: italic;
+  color: #3498db;
+}
+.p-sm{
+  margin-top: 12px;
+}
+.p-sm a{
+  margin: 0 4px;
+  display: inline-block;
+  width: 38px;
+  height: 30px;
+  transition: 0.6s;
+}
+.p-sm a:hover{
+  transform: scale(1.3);
+}
+.p-sm a i{
+  color: #333;
+  line-height: 30px;
+}
+@media screen and(max-width: 600px){
+  .pe{
+    width: 100%;
+  }
+}
+.footter{
+    width: 100%;
+    height: 150px;
+    background: black;
+    position: relative;
+}
+.footter img{
+    width: 6%;
+    height: 35%;
+    padding-left: 30px;
+    margin-top: 30px;
+}
+.footter ul{
+    display: inline-block;
+}
+.footter ul li{
+    float: left;
+    text-decoration: none;
+    list-style-type: none;
+    padding-top: 20px;
+    margin: 0 10px;
+}
+.footter ul li a{
+    color: white;
+    text-decoration: none;
+    font-family: serif;
+}
+.footter ul li:hover a{
+    border-bottom: 1px solid #fff;
+}
+.footter p{
+    font-family: serif;
+    color: white;
+    margin-top: 20px;
+    margin-left: 50px;
+
+}
+

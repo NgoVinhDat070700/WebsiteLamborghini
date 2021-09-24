@@ -1,0 +1,354 @@
+
+body{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-family: sans-serif;
+  justify-content: center;
+  background: url(bg.jpg);
+  background-size: cover;
+  background-position: center;
+}
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+nav{
+  margin-top: -275px;
+  background: black;
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
+}
+nav:after{
+  content: '';
+  clear: both;
+  display: table;
+}
+nav .logo{
+  float: left;
+  color: white;
+  background-image: cover;
+  padding-left: 0px;
+}
+nav ul{
+  float: right;
+  margin-right: 40px;
+  list-style: none;
+  position: relative;
+}
+nav ul li{
+  float: left;
+  display: inline-block;
+  background: black;
+  margin: 0 5px;
+}
+nav ul li a{
+  color: white;
+  line-height: 70px;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 8px 15px;
+}
+nav ul li a:hover{
+  color: cyan;
+  border-radius: 5px;
+  box-shadow:  0 0 5px #33ffff,
+               0 0 10px #66ffff;
+}
+nav ul ul li a:hover{
+  box-shadow: none;
+}
+nav ul ul{
+  position: absolute;
+  top: 90px;
+  border-top: 3px solid cyan;
+  opacity: 0;
+  visibility: hidden;
+  transition: top .3s;
+}
+nav ul ul ul{
+  border-top: none;
+}
+nav ul li:hover > ul{
+  top: 70px;
+  opacity: 1;
+  visibility: visible;
+}
+nav ul ul li{
+  position: relative;
+  margin: 0px;
+  width: 150px;
+  float: none;
+  display: list-item;
+  border-bottom: 1px solid rgba(0,0,0,0.3);
+}
+nav ul ul li a{
+  line-height: 50px;
+}
+nav ul ul ul li{
+  position: relative;
+  top: -60px;
+  left: 150px;
+}
+.show,.icon,input.input{
+  display: none;
+}
+.fa-plus{
+  font-size: 15px;
+  margin-left: 40px;
+}
+@media all and (max-width: 968px) {
+  nav ul{
+    margin-right: 0px;
+    float: left;
+  }
+  nav .logo{
+    padding-left: 30px;
+    width: 100%;
+  }
+  .show + a, ul{
+    display: none;
+  }
+  nav ul li,nav ul ul li{
+    display: block;
+    width: 100%;
+  }
+  nav ul li a:hover{
+    box-shadow: none;
+  }
+  .show{
+    display: block;
+    color: white;
+    font-size: 18px;
+    padding: 0 20px;
+    line-height: 70px;
+    cursor: pointer;
+  }
+  .show:hover{
+    color: cyan;
+  }
+  .icon{
+    display: block;
+    color: white;
+    position: absolute;
+    top: 0;
+    right: 40px;
+    line-height: 70px;
+    cursor: pointer;
+    font-size: 25px;
+  }
+  nav ul ul{
+    top: 70px;
+    border-top: 0px;
+    float: none;
+    position: static;
+    display: none;
+    opacity: 1;
+    visibility: visible;
+  }
+  nav ul ul a{
+    padding-left: 40px;
+  }
+  nav ul ul ul a{
+    padding-left: 80px;
+  }
+  nav ul ul ul li{
+    position: static;
+  }
+  [id^=btn]:checked + ul{
+    display: block;
+  }
+  nav ul ul li{
+    border-bottom: 0px;
+  }
+  span.cancel:before{
+    content: '\f00d';
+  }
+}
+.container{
+  position: relative;
+  width: 400px;
+  background: white;
+  padding: 60px 40px;
+  margin-top: 70px;
+  margin-left: 500px;
+}
+header{
+  font-size: 40px;
+  margin-bottom: 60px;
+  font-family: 'Montserrat', sans-serif;
+}
+.input-field, form .button{
+  margin: 25px 0;
+  position: relative;
+  height: 50px;
+  width: 100%;
+}
+.input-field input{
+  height: 100%;
+  width: 100%;
+  border: 1px solid silver;
+  padding-left: 15px;
+  outline: none;
+  font-size: 19px;
+  transition: .4s;
+}
+input:focus{
+  border: 1px solid #1DA1F2;
+}
+.input-field label, span.show{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.input-field label{
+  left: 15px;
+  pointer-events: none;
+  color: grey;
+  font-size: 18px;
+  transition: .4s;
+}
+span.show{
+  right: 20px;
+  color: #111;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+  visibility: hidden;
+  font-family: 'Open Sans', sans-serif;
+}
+input:valid ~ span.show{
+  visibility: visible;
+}
+input:focus ~ label,
+input:valid ~ label{
+  transform: translateY(-33px);
+  background: white;
+  font-size: 16px;
+  color: #1DA1F2;
+}
+form .button{
+  margin-top: 30px;
+  overflow: hidden;
+  z-index: 111;
+}
+.button .inner{
+  position: absolute;
+  height: 100%;
+  width: 300%;
+  left: -100%;
+  z-index: -1;
+  transition: all .4s;
+  background: -webkit-linear-gradient(right,#00dbde,#fc00ff,#00dbde,#fc00ff);
+}
+.button:hover .inner{
+  left: 0;
+}
+.button button{
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: none;
+  outline: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+}
+.container .auth{
+  margin: 35px 0 20px 0;
+  font-size: 19px;
+  color: grey;
+}
+.links{
+  display: flex;
+  cursor: pointer;
+}
+.facebook, .google{
+  height: 40px;
+  width: 100%;
+  border: 1px solid silver;
+  border-radius: 3px;
+  margin: 0 10px;
+  transition: .4s;
+}
+.facebook:hover{
+  border: 1px solid #4267B2;
+}
+.google:hover{
+  border: 1px solid #dd4b39;
+}
+.facebook i, .facebook span{
+  color: #4267B2;
+}
+.google i, .google span{
+  color: #dd4b39;
+}
+.links i{
+  font-size: 23px;
+  line-height: 40px;
+  margin-left: -90px;
+}
+.links span{
+  position: absolute;
+  font-size: 17px;
+  font-weight: bold;
+  padding-left: 8px;
+  font-family: 'Open Sans', sans-serif;
+}
+.signup{
+  margin-top: 50px;
+  font-family: 'Noto Sans', sans-serif;
+}
+.signup a{
+  color: #3498db;
+  text-decoration: none;
+}
+.signup a:hover{
+  text-decoration: underline;
+}
+.footter{
+    margin-top: 800px;
+    width: 100%;
+    height: 150px;
+    background: black;
+    position: relative;
+    margin-left: -900px;
+}
+.footter img{
+    width: 6%;
+    height: 35%;
+    margin-left: -750px;
+    margin-top: 30px;
+}
+.footter ul{
+    display: inline-block;
+}
+.footter ul li{
+    float: left;
+    text-decoration: none;
+    list-style-type: none;
+    padding-top: 20px;
+    margin: 0 10px;
+}
+.footter ul li a{
+    color: white;
+    text-decoration: none;
+    font-family: serif;
+}
+.footter ul li:hover a{
+    border-bottom: 1px solid #fff;
+}
+.footter p{
+    font-family: serif;
+    color: white;
+    margin-top: 20px;
+    margin-left: -350px;
+
+}
+

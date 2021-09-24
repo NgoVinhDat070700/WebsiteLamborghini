@@ -1,0 +1,204 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+img.anhbai {
+    margin-top: 9px;
+}
+
+.ndpahai {
+    width: 41%;
+    margin-left: 12%;
+}
+
+p.chunhat {
+    color: gray;
+    margin-bottom: 28px;
+}
+
+p.chudam {
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.ndtrai {
+    width: 36%;
+    margin-left: 9%;
+}
+
+.nd {
+    display: flex;
+}
+
+.ten {
+    padding-top: 27px;
+    margin: 22px 111px;
+    width: 186px;
+    height: 38px;
+    border-bottom: 1px solid;
+}
+
+.nd7 {
+    font-family: tahoma;
+    background: #e8e8e8;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-size: 13px;
+}
+
+.tin {
+    line-height: 24px;
+    font-size: 14px;
+}
+
+h4 {
+    margin-right: 20px;
+}
+
+h4.active {
+    color: black;
+    margin-left: 72px;
+}
+
+.tintren {
+    display: flex;
+    color: #00000052;
+    border-bottom: 1px solid gray;
+    margin: 20px 474px;
+    padding-bottom: 20px;
+}
+
+.nd6 {
+    text-align: center;
+    font-family: tahoma;
+    margin-top: 15px;
+}
+
+input[type="text"] {
+    width: 250px;
+    height: 33px;
+    margin-top: 20px;
+}
+
+.nd5 {
+    text-align: center;
+    line-height: 30px;
+    font-family: tahoma;
+    background-color: black;
+    color: white;
+    padding: 20px;
+}
+
+p.nd {}
+
+.thongtin1 {
+    width: 107%;
+    font-family: tahoma;
+}
+
+.trai2 {
+    margin-right: 148px;
+}
+
+img.anh2 {
+    width: 50%;
+}
+
+.ND4 {
+    margin-top: 20px;
+    display: flex;
+}
+
+.thongtin2 {
+    margin-left: 64px;
+    padding-top: 33px;
+    font-family: tahoma;
+}
+
+p.tieude1 {
+    font-size: 32px;
+}
+
+button:hover {
+    background: white;
+    color: black;
+    border: 2px solid black
+}
+
+button {
+    width: 200px;
+    height: 37px;
+    border: 0;
+    background: black;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    transition: 1s;
+}
+
+.trai {
+    width: 40%;
+    font-family: tahoma;
+    padding-top: 20px;
+}
+
+.ND1 {
+    display: flex;
+    margin-top: 53px;
+}
+
+img.phai {
+    width: 48%;
+    margin-right: 23px;
+    height: 512px;
+}
+
+.tieude {
+    margin: 20px;
+    padding-left: 38px;
+    font-family: tahoma;
+}
+
+.chu h1 {
+    font-size: 45px;
+}
+
+.chu p {
+    font-size: 35px;
+}
+
+.chu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: white;
+    background: #00000066;
+    width: 44%;
+    height: 538px;
+    padding-top: 12%;
+    padding-left: 5%;
+    font-family: tahoma;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+.anh {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    height: 100%;
+}
+
+.dau {
+    width: 100%;
+    position: relative;
+    height: 700px;
+}

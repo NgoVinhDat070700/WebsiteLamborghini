@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+	<link rel="stylesheet" type="text/css" href="danhgia.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="lamborghini/logo.webp" alt=""></div>
+            <label for="btn" class="icon">
+                <span class="fa fa-bars"></span>
+            </label>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Tintuc.html">News</a></li>
+                <li><a href="img.html">OwenerShip</a></li>
+                <li>
+                    <a href="#">Model</a>
+                    <ul>
+                        <li><a href="bai2.html">Huracan</a></li>
+                        <li><a href="bai1.html">Avenetador</a></li>
+                        <li><a href="bai3.html">Veneno</a></li>
+                    </ul>
+                </li>
+                <li><a href="lichsu.html">History</a></li>
+                <li><a href="Store.html">Store</a></li>
+                <li><a href="map.html">DealerShips</a></li>
+                <li><a href="MotorSport.html">MotorSport</a></li>
+                <li><a href="MUSEUM.html">Museum</a></li>
+                <li><a href="lienhe.html">Contact Us</a></li>
+                <li>
+                    <label for="btn-2" class="show">Services +</label>
+                    <a href="#">User</a>
+                    <ul>
+                        <li><a href="form2.html">Login</a></li>
+                        <li><a href="dangky.html">Register</a></li>
+                        <li><a href="danhgia.html">Evaluate</a></li>
+                        <!--<li>
+                            <label for="btn-3" class="show">More +</label>
+                            <a href="#">More <span class="fa fa-plus"></span></a>
+                            <input type="checkbox" id="btn-3">
+                            <ul>
+                                <li><a href="#">Submenu-1</a></li>
+                                <li><a href="#">Submenu-2</a></li>
+                                <li><a href="#">Submenu-3</a></li>
+                            </ul>
+                        </li>!-->
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div class="container">
+          <div class="post">
+            <div class="text">
+            Thanks for rating us!</div>
+            <div class="edit">
+            EDIT</div>
+        </div>
+        <div class="star-widget">
+            <input type="radio" name="rate" id="rate-5" class="checked">
+            <label for="rate-5" class="fas fa-star"></label>
+            <input type="radio" name="rate" id="rate-4" class="checked">
+            <label for="rate-4" class="fas fa-star"></label>
+            <input type="radio" name="rate" id="rate-3" class="checked">
+            <label for="rate-3" class="fas fa-star"></label>
+            <input type="radio" name="rate" id="rate-2" class="checked">
+            <label for="rate-2" class="fas fa-star"></label>
+            <input type="radio" name="rate" id="rate-1" class="checked">
+            <label for="rate-1" class="fas fa-star"></label>
+            <form action="#">
+              <header></header>
+              <div class="textarea">
+                <textare cols="30" placeholder="Describe your experience.."></textare> 
+
+                <div class="btn">
+                    <button type="submit">Post</button>
+                </div>
+            </div>
+        </div></div>
+
+        <script>
+          const btn = document.querySelector("button");
+          const post = document.querySelector(".post");
+          const widget = document.querySelector(".star-widget");
+          const editBtn = document.querySelector(".edit");
+          btn.onclick = ()=>{
+            widget.style.display = "none";
+            post.style.display = "block";
+            editBtn.onclick = ()=>{
+              widget.style.display = "block";
+              post.style.display = "none";
+          }
+          return false;
+      }
+  </script>
+  <div class="footter">
+    <img src="lamborghini\logo.webp" alt="">
+    <ul class="menutrai">
+        <li class="b"><a href=""> COMPANY</a></li>
+        <li class="b"><a href=""> CAREES</a>
+        </li>
+        <li class="b"><a href="">PRIVACY POLICY</a></li>
+        <li class="b"><a href="">MEDIA CENTER</a></li>
+    </ul>
+    <p>Copyright © 2020 Automobili Lamborghini S.p.A. a sole shareholder company part of Audi Group. All rights reserved. VAT no. IT 00591801204</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,560 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+
+}
+nav{
+  background: black;
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
+}
+nav:after{
+  content: '';
+  clear: both;
+  display: table;
+}
+nav .logo{
+  float: left;
+  color: white;
+  background-image: cover;
+  padding-left: 0px;
+}
+nav ul{
+  float: right;
+  margin-right: 40px;
+  list-style: none;
+  position: relative;
+}
+nav ul li{
+  float: left;
+  display: inline-block;
+  background: black;
+  margin: 0 5px;
+}
+nav ul li a{
+  color: white;
+  line-height: 70px;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 8px 15px;
+}
+nav ul li a:hover{
+  color: cyan;
+  border-radius: 5px;
+  box-shadow:  0 0 5px #33ffff,
+               0 0 10px #66ffff;
+}
+nav ul ul li a:hover{
+  box-shadow: none;
+}
+nav ul ul{
+  position: absolute;
+  top: 90px;
+  border-top: 3px solid cyan;
+  opacity: 0;
+  visibility: hidden;
+  transition: top .3s;
+}
+nav ul ul ul{
+  border-top: none;
+}
+nav ul li:hover > ul{
+  top: 70px;
+  opacity: 1;
+  visibility: visible;
+}
+nav ul ul li{
+  position: relative;
+  margin: 0px;
+  width: 150px;
+  float: none;
+  display: list-item;
+  border-bottom: 1px solid rgba(0,0,0,0.3);
+}
+nav ul ul li a{
+  line-height: 50px;
+}
+nav ul ul ul li{
+  position: relative;
+  top: -60px;
+  left: 150px;
+}
+.show,.icon,input{
+  display: none;
+}
+.fa-plus{
+  font-size: 15px;
+  margin-left: 40px;
+}
+@media all and (max-width: 968px) {
+  nav ul{
+    margin-right: 0px;
+    float: left;
+  }
+  nav .logo{
+    padding-left: 30px;
+    width: 100%;
+  }
+  .show + a, ul{
+    display: none;
+  }
+  nav ul li,nav ul ul li{
+    display: block;
+    width: 100%;
+  }
+  nav ul li a:hover{
+    box-shadow: none;
+  }
+  .show{
+    display: block;
+    color: white;
+    font-size: 18px;
+    padding: 0 20px;
+    line-height: 70px;
+    cursor: pointer;
+  }
+  .show:hover{
+    color: cyan;
+  }
+  .icon{
+    display: block;
+    color: white;
+    position: absolute;
+    top: 0;
+    right: 40px;
+    line-height: 70px;
+    cursor: pointer;
+    font-size: 25px;
+  }
+  nav ul ul{
+    top: 70px;
+    border-top: 0px;
+    float: none;
+    position: static;
+    display: none;
+    opacity: 1;
+    visibility: visible;
+  }
+  nav ul ul a{
+    padding-left: 40px;
+  }
+  nav ul ul ul a{
+    padding-left: 80px;
+  }
+  nav ul ul ul li{
+    position: static;
+  }
+  [id^=btn]:checked + ul{
+    display: block;
+  }
+  nav ul ul li{
+    border-bottom: 0px;
+  }
+  span.cancel:before{
+    content: '\f00d';
+  }
+}
+
+img.anhbai {
+    margin-top: 9px;
+}
+
+.ndpahai {
+    width: 41%;
+    margin-left: 12%;
+}
+
+p.chunhat {
+    color: gray;
+    margin-bottom: 28px;
+}
+
+p.chudam {
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.ndtrai {
+    width: 36%;
+    margin-left: 9%;
+}
+
+.nd {
+    display: flex;
+}
+
+.ten {
+    padding-top: 27px;
+    margin: 22px 111px;
+    width: 186px;
+    height: 38px;
+    border-bottom: 1px solid;
+}
+
+.nd7 {
+    font-family: tahoma;
+    background: #e8e8e8;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-size: 13px;
+}
+
+.tin {
+    line-height: 24px;
+    font-size: 14px;
+}
+.chu{
+    margin-top: 50px;
+}
+h4 {
+    margin-right: 20px;
+}
+
+h4.active {
+    color: black;
+    margin-left: 72px;
+}
+
+.tintren {
+    display: flex;
+    color: #00000052;
+    border-bottom: 1px solid gray;
+    margin: 20px 474px;
+    padding-bottom: 20px;
+}
+
+.nd6 {
+    text-align: center;
+    font-family: tahoma;
+    margin-top: 15px;
+}
+
+input[type="text"] {
+    width: 250px;
+    height: 33px;
+    margin-top: 20px;
+}
+
+.nd5 {
+    text-align: center;
+    line-height: 30px;
+    font-family: tahoma;
+    background-color: black;
+    color: white;
+    padding: 20px;
+}
+
+p.nd {}
+
+.thongtin1 {
+    width: 107%;
+    font-family: tahoma;
+}
+
+.trai2 {
+    margin-right: 148px;
+}
+
+img.anh2 {
+    width: 50%;
+}
+
+.ND4 {
+    margin-top: 20px;
+    display: flex;
+}
+
+.thongtin2 {
+    margin-left: 64px;
+    padding-top: 33px;
+    font-family: tahoma;
+}
+
+p.tieude1 {
+    font-size: 32px;
+}
+
+button:hover {
+    background: white;
+    color: black;
+    border: 2px solid black;
+}
+
+button {
+    width: 200px;
+    height: 37px;
+    border: 0;
+    background: black;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    transition: 1s;
+}
+
+.trai {
+    width: 40%;
+    font-family: tahoma;
+    padding-top: 20px;
+}
+
+.ND1 {
+    display: flex;
+    margin-top: 53px;
+}
+
+img.phai {
+    width: 48%;
+    margin-right: 23px;
+    height: 512px;
+}
+
+.tieude {
+    margin: 20px;
+    padding-left: 38px;
+    font-family: tahoma;
+}
+
+.chu h1 {
+    font-size: 45px;
+}
+
+.chu p {
+    font-size: 35px;
+    margin-top: 20px;
+}
+
+.chu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: white;
+    background: #00000066;
+    width: 44%;
+    height: 538px;
+    padding-top: 8%;
+    padding-left: 5%;
+    font-family: tahoma;
+}
+
+.anh img {
+    width: 100%;
+    height: 100%;
+}
+
+.anh {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    height: 100%;
+    width: 100%;
+
+}
+
+.dau {
+    width: 100%;
+    position: relative;
+    height: 700px;
+}
+.cauhoi{
+    width: 60%;
+    height: 200px;
+    padding-left: 100px;
+    margin-top: 50px;
+}
+.cauhoi .conten{
+    margin-top: 20px;
+}
+.hotro{
+    display: flex;
+    width: 100%;
+
+}
+.traloi{
+    padding-left: 100px;
+    margin-top: 30px;
+}
+.traloi .khung{
+    width: 250px;
+    border: 1px solid black;
+    height: 200px;
+}
+.traloi .khung p{
+    text-align: center;
+    margin-top: 100px;
+}
+.traloi .khung .traloi1{
+    background: #000;
+    color: #fff;
+    margin-top: 25px;
+    padding-top: 10px;
+    height: 30px;
+    margin-bottom: 0px;
+    letter-spacing: 3px;
+    cursor: pointer;
+}
+.traloi .khung .traloi1:hover{
+    background: gray;
+}
+.chualienhe{
+    display: flex;
+    width: 100%; 
+}
+.lienhe{
+    padding-left: 100px;
+    height: 200px;
+    width: 250px;
+    margin-top: 30px;
+}
+.lienhe .vung{
+    background: #000;
+    color: #fff;
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    padding-top: 10px;
+    cursor: pointer;
+}
+.lienhe .vung:hover{
+    background: gray;
+}
+.lienhe p{
+    margin-top: 10px;
+
+}
+.maulienhe{
+    padding-left: 100px;
+    background: #efeeea;
+
+}
+h2{
+    padding-left: 10px;
+    margin-top: 10px;}
+.maulienhe h2{
+    margin-left: -100px;
+    padding-top: 50px;
+}
+.maulienhe p{
+    margin-top: 30px;
+}
+.maulienhe p.maulh1{
+    background: #000;
+    color: #fff;
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    padding-top: 10px;
+    cursor: pointer;
+}
+.maulienhe p.maulh1:hover{
+    background: gray;
+}
+.maulienhe1{
+    padding-left: 100px;
+    background: #efeeea;
+    height: 200px;
+}
+.maulienhe1 p{
+    padding-top:50px;
+    margin-top: 30px;
+}
+.maulienhe1 p.maulh1{
+    background: #000;
+    color: #fff;
+    width: 200px;
+    height: 30px;
+    text-align: center;
+    padding-top: 10px;
+    cursor: pointer;
+}
+.maulienhe1 p.maulh1:hover{
+    background: gray;
+}
+.anh1 p {
+    position: absolute;
+    z-index: 3;
+    top: 196px;
+    left: 146px;
+    font-size: 38px;
+    color: white;
+    /* text-align: center; */
+}
+.zoom {
+    transition: 1s;
+}
+
+.anh1:hover .xam {
+    opacity: 0;
+}
+
+.anh1:hover .zoom {
+    transform: scale(1.2);
+}
+
+
+.anh1 .xam {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 380px;
+    background: black;
+    z-index: 2;
+    opacity: 0.5;
+    transition: 0.5s;
+}
+.divanh {
+    display: flex;
+    width: 100%;
+}
+
+.anh1 {
+    width: 47%;
+    height: 380px;
+    position: relative;
+    padding-left: 41px;
+    overflow: hidden;
+}
+
+.footter{
+    width: 100%;
+    height: 150px;
+    background: black;
+    position: relative;
+}
+.footter img{
+    width: 6%;
+    height: 35%;
+    padding-left: 30px;
+    margin-top: 30px;
+}
+.footter ul{
+    display: inline-block;
+}
+.footter ul li{
+    float: left;
+    text-decoration: none;
+    list-style-type: none;
+    padding-top: 20px;
+    margin: 0 10px;
+}
+.footter ul li a{
+    color: white;
+    text-decoration: none;
+    font-family: serif;
+}
+.footter ul li:hover a{
+    border-bottom: 1px solid #fff;
+}
+.footter p{
+    font-family: serif;
+    color: white;
+    margin-top: 20px;
+    margin-left: 50px;
+
+}

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+    <html>
+    <meta charset="utf-8">
+
+    <head>
+        <title></title>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+        <link rel="stylesheet" type="text/css" href="demo.css">
+    </head>
+
+    <body>
+        <nav>
+        <div class="logo">
+            <img src="lamborghini/logo.webp" alt=""></div>
+            <label for="btn" class="icon">
+                <span class="fa fa-bars"></span>
+            </label>
+            <input type="checkbox" id="btn">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Tintuc.html">News</a></li>
+                <li><a href="img.html">OwenerShip</a></li>
+                <li>
+                    <label for="btn-1" class="show">Features +</label>
+                    <a href="#">Model</a>
+                    <input type="checkbox" id="btn-1">
+                    <ul>
+                        <li><a href="bai2.html">Huracan</a></li>
+                        <li><a href="bai1.html">Avenetador</a></li>
+                        <li><a href="bai3.html">Veneno</a></li>
+                    </ul>
+                </li>
+                <li><a href="lichsu.html">History</a></li>
+                <li><a href="Store.html">Store</a></li>
+                <li><a href="map.html">DealerShips</a></li>
+                <li><a href="MotorSport.html">MotorSport</a></li>
+                <li><a href="MUSEUM.html">Museum</a></li>
+                <li><a href="lienhe.html">Contact Us</a></li>
+                <li>
+                    <label for="btn-2" class="show">Services +</label>
+                    <a href="#">User</a>
+                    <input type="checkbox" id="btn-2">
+                    <ul>
+                        <li><a href="form2.html">Login</a></li>
+                        <li><a href="dangky.html">Register</a></li>
+                        <li><a href="danhgia.html">Evaluate</a></li>
+                        <!--<li>
+                            <label for="btn-3" class="show">More +</label>
+                            <a href="#">More <span class="fa fa-plus"></span></a>
+                            <input type="checkbox" id="btn-3">
+                            <ul>
+                                <li><a href="#">Submenu-1</a></li>
+                                <li><a href="#">Submenu-2</a></li>
+                                <li><a href="#">Submenu-3</a></li>
+                            </ul>
+                        </li>!-->
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div id="map"></div>
+        <div class="middle">
+            <div class="menu">
+                <li class="item" id="profile">
+                    <a href="#profile" class="btn"><i class="fas fa-globe"></i>Hiện Thị Ảnh Bản Đồ</a>
+                    <div class="smenu">
+                        <a href="#" class="_showMAP" id="satellite">Ảnh Vệ Tinh</a>
+                        <a href="#" class="_showMAP" id="ggMAP">Ảnh Bản Đồ</a>
+                    </div>
+                </li>
+                <li class="item" id="messages">
+                    <a href="#messages" class="btn"><i class="fas fa-map-marked-alt"></i>Thông Tin Địa Điểm(Show Room)</a>
+                    <div class="smenu">
+                        <a href="#">LAMBORGHINI EDINBURGH</a>
+                        <a href="#">LAMBORGHINI PARIS</a>
+                        <a href="#">LAMBORGHINI BRUSSELS</a>
+                        <a href="#">LAMBORGHINI MADRID</a>
+                        <a href="#">LAMBORGHINI LISBON</a>
+                        <a href="#">LAMBORGHINI ROME</a>
+                    </div>
+                </li>
+                <li class="item" id="setting">
+                    <a href="#setting" class="btn"><i class="fas fa-cogs"></i>Thông Tin Dịch Vụ (Service)</a>
+                    <div class="smenu">
+                        <a href="#">LAMBORGHINI SERVICE DROGENBOS</a>
+                        <a href="#">LAMBORGHINI SERVICE DUESSELDORF</a>
+                        <a href="#">LAMBORGHINI SERVICE CHEMNITZ</a>
+                        <a href="#">LAMBORGHINI SERVICE LYON</a>
+                        <a href="#">LAMBORGHINI SERVICE CANNES</a>
+                        <a href="#">LAMBORGHINI SERVICE LUXEMBOURG</a>
+                        <a href="#">LAMBORGHINI SERVICE MILANO</a>
+                        <a href="#">LAMBORGHINI SERVICE ATHENS</a>
+                        <a href="#">LAMBORGHINI SERVICE ROMA</a>
+                    </div>
+                </li>
+                <li class="item" id="country">
+                    <a href="#country" class="btn"><i class="fas fa-flag-usa"></i>Coutry</a>
+                    <div class="smenu">
+                        <a href="#">ITALY</a>
+                        <a href="#">BELGIUM</a>
+                        <a href="#">FRANCE</a>
+                        <a href="#">RUSSIA</a>
+                        <a href="#">MONACO</a>
+                        <a href="#">LUXEMBOURG</a>
+                        <a href="#">POLAN</a>
+                        <a href="#">AUSTRIA</a>
+                        <a href="#">GERMANY</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="#" class="btn"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                </li>
+            </div>
+        </div>
+        <script>
+        function initMap() {
+            var options = {
+                zoom: 5,
+                center: { lat: 48.360812, lng: 10.290818 },
+                panControl: true,
+                scaleControl: true,
+                mapTypeId: "satellite",
+                zoomControl: true
+            };
+            var map = new google.maps.Map(document.getElementById('map'), options);
+            var btn_satellite = document.getElementById('satellite');
+            btn_satellite.addEventListener('click', function() {
+                map.setMapTypeId('satellite');
+            }, false);
+            var btn_ggMAP = document.getElementById('ggMAP');
+            btn_ggMAP.addEventListener('click', function() {
+                map.setMapTypeId('terrain');
+            }, false);
+            var locations = [{
+                    coords: { lat: 48.855004, lng: 2.331106 },
+                    content: '<h2><strong>Lamborghini PARIS</strong></br>Rue Bellini 2 Puteax </br>+33(1)84 25 98 81</h2>',
+                    iconImage: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png'
+                },
+                {
+                    coords: { lat: 41.617795, lng: -2.189145 },
+                    content: '<h2> <strong>Lamborghini MADRID</strong></br>Via De Las Dos  Castillas 9 Pozuelo De Alarcon(Madrid)</br>+34 91 71 54 011</h2>',
+                    iconImage: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png'
+
+                },
+                {
+                    coords: { lat: 39.331481, lng: -8.725926 },
+                    content: '<h2> <strong>Lamborghini LISBON</strong></br>R Sao Francisco,582 Alcabideche</br>+351 960 114 424</h2>',
+                    iconImage: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png'
+                },
+                {
+                    coords: { lat: 41.854519, lng: 12.508503 },
+                    content: '<h2><strong>Lamborghini Rome</strong>Via Leonida Bissolati 62 Rome</br+39 06 45506122></h2>',
+                    iconImage: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png'
+                },
+                {
+                    coords: { lat: 53.520771, lng: -2.213169 },
+                    content: '<h2><strong>Lamborghini EDINBURGH</strong></br>8 Whitehill Road , Fort Kinnaird Edinburgh</br>0131 629 9164</h2>',
+                    iconImage: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png'
+                },
+                {
+                    coords: { lat: 42.269269, lng: 12.614733 },
+                    content: '<h2><strong>Lamborghini Service ROMA</strong></br>Via Smerillo 32 Roma </br>06 88376445</h2>',
+                    iconImage: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png'
+                },
+                {
+                    coords: { lat: 48.243214, lng: 16.323730 },
+                    content: '<h2><strong>Lamborghini Service WIEN</strong></br>Liesinger Flirgasse 14-18 Wien</br>+43 1 866 88=0</h2>',
+                    iconImage: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png'
+                },
+                {
+                    coords: { lat: 53.603087, lng: 10.054142 },
+                    content: '<h2><strong>Lamborghini Service HAMBURG</strong></br>Merkurring 2</br>0049 40 570 0300</h2>',
+                    iconImage: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png'
+                },
+                {
+                    coords: { lat: 52.284723, lng: 20.963667 },
+                    content: '<h2><strong>Lamborghini Service WARSZAWA</strong></br>ul,Poczynska 120 B Warzama</br>+48 222589660</h2>',
+                    iconImage: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png'
+                },
+                {
+                    coords: { lat: 59.853000, lng: 30.292199 },
+                    content: '<h2> <strong>Lamborghini Service ST.PETERSBURG</strong></br>Pulkovskoye sh,14 St.Petersburg</br>007 (812) 500 500 1</h2>',
+                    iconImage: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png'
+                },
+                {
+                    coords: { lat: 48.163582, lng: 6.483243 },
+                    content: '<h2> <strong>Lamborghini Collision Center EPINAL</strong></br>40 Evenue du Rose Poirier</h2>',
+                    iconImage: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png'
+                },
+                {
+                    coords: { lat: 44.892114, lng: 11.073438 },
+                    content: '<h2> <strong>Lamborghini Collision Center MIRANDOLA</strong></br>Viale Antonio Gramsci 339 Mirandola(Mo)</br>0039 0535 20304</h2>',
+                    iconImage: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png'
+                },
+                {
+                    coords: { lat: 55.862079, lng: -4.228360 },
+                    content: '<h2><strong>Lamborghini Collision Center GLASGOW</strong></br>1033 South West Glasgow</h2>',
+                    iconImage: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png'
+                },
+                {
+                    coords: { lat: -26.182288, lng: 28.079161 },
+                    content: '<h2> <strong>Lamborghini Collision Center JOHANNESBURG</strong></br>71 Hay St,Ophirton Johannesburg</h2>',
+                    iconImage: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png'
+                }
+            ];
+            for (let index = 0; index < locations.length; index++) {
+                addMarker(locations[index]);
+            }
+
+            function addMarker(props) {
+                var marker = new google.maps.Marker({
+                    position: props.coords,
+                    map: map,
+                    animation: google.maps.Animation.DROP
+                });
+                if (props.content) {
+                    var infoWindow = new google.maps.InfoWindow({ content: props.content });
+                    marker.addListener('click', function() {
+                        infoWindow.open(map, marker);
+                    });
+                    marker.addListener('click', function() {
+                        if (marker.getAnimation() != null) {
+                            marker.setAnimation(null);
+                        } else {
+                            marker.setAnimation(google.maps.Animation.BOUNCE);
+                        }
+                    });
+                }
+            }
+        }
+        </script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyArM4GnMGbtJoZTyMZQjvPH3YBwWM5fGv4 &callback=initMap" async defer></script>
+    <div class="footter">
+        <img src="lamborghini\logo.webp" alt="">
+        <ul class="menutrai">
+            <li class="b"><a href=""> COMPANY</a></li>
+            <li class="b"><a href=""> CAREES</a>
+            </li>
+            <li class="b"><a href="">PRIVACY POLICY</a></li>
+            <li class="b"><a href="">MEDIA CENTER</a></li>
+        </ul>
+        <p>Copyright © 2020 Automobili Lamborghini S.p.A. a sole shareholder company part of Audi Group. All rights reserved. VAT no. IT 00591801204</p>
+    </div>
+    </body> 
+    </html>

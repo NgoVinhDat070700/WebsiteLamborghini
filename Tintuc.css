@@ -1,0 +1,298 @@
+nav{
+    z-index: 9999;
+}
+.anh1{
+    position: relative;
+    width: 100%;
+    height: 600px;
+}
+.anh1 img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+p.chu2 {
+    font-size: 50px;
+}
+.anh1 .mau {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    background: black;
+    left: 0px;
+    width: 55%;
+    height:100%;
+    opacity: 0.5;
+    margin-top: 0;
+    clip-path: polygon(0 0, 100% 0%, 75% 100%, 0% 100%);
+}
+
+.tieude {
+    position: absolute;
+    top: 210px;
+    left: 182px;
+    z-index: 3;
+    color: white;
+    font-size: 33px;
+    line-height: 63px;
+}
+.phan2{
+    width: 100%;
+    height: 1000px;
+    margin: 0 auto;
+    padding-top: 10px;
+    padding-left: 30px;
+    position: relative;
+    cursor: pointer;
+
+}
+.phan2 .chu{
+    font-weight: bold;
+    font-size: 15px;
+    padding-top: 30px;
+}
+.phan2 .thongtin{
+    font-weight: bold;
+    font-size: 30px;
+    padding-top: 30px;
+}
+.phan2 img{
+    width: 100%;
+    height: 500px;
+    background-image: cover;
+}
+div.slide-img img{
+    padding-left: 8px;
+    padding-right: 0px;
+}
+div.time{
+    padding-left: 10px;
+    font-weight: bold;
+    font-size: 15px;
+}
+div.chitiet{
+    width: 80%;
+    margin: 10px;
+}
+.button a {
+    position: relative;
+    display: inline-block;
+    padding: 10px 30px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-align: center;
+    color: #fff;
+}
+
+.button {
+    width: 211px;
+    height: 43px;
+    background: black;
+    color: white;
+    padding: 0px;
+    text-align: center;
+    margin: 31px;
+    transition: 0.5s;
+}
+
+.button:hover {
+    color: black;
+    background: gray;
+}
+.phan3{
+    width: 100%;
+    height: 400px;
+    margin: 0 auto;
+    padding-top: 10px;
+    padding-left: 30px;
+    cursor: pointer;
+
+}
+.phan3 .chu{
+    font-weight: bold;
+    font-size: 15px;
+}
+.phan3 .thongtin{
+    font-weight: bold;
+    font-size: 30px;
+}
+.phan3 img{
+    width: 50%;
+    height: 400px;
+}
+.phan3{
+    display: flex;
+}
+.phan4{
+    width: 100%;
+    height: 400px;
+    margin: 0 auto;
+    padding-top: 10px;
+    padding-left: 30px;
+    cursor: pointer;
+}
+.phan4 .chu{
+    font-weight: bold;
+    font-size: 15px;
+}
+.phan4 .thongtin{
+    font-weight: bold;
+    font-size: 30px;
+}
+.phan4 img{
+    width: 50%;
+    height: 400px;
+}
+.phan4{
+    display: flex;
+}
+.contet-img-museum {
+    width: 50%;
+    margin: auto;
+    align-items: center;
+    border: 1px solid black;
+    overflow: hidden;
+    position: relative;
+}
+.slide-img {
+    display: flex;
+    width: 100%;
+    height: 500px;
+}
+.slide-img img{
+    width: 100%;
+    height: 500px;
+}
+#prevbtn{
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    left: 5%;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+#nextbtn{
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    right: 5%;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+.grid{
+    margin: 80px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 30px;
+    align-items: center;
+}
+.grid > article{
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 6px 0px rgba(0,0,0,0.3);
+    border-radius: 3px;
+    text-align: center;
+}
+.grid > article:hover{
+    transition: transform .1s ease-out;
+    transform: translateY(5px);
+}
+.grid > article img {
+    width: 100%;
+}
+.text{
+    padding: 0 20px 20px;
+}
+.text > h3{
+    text-transform: uppercase;
+}
+.text > button{
+    background: linear-gradient(to right,#f030a7,#f656ff,#f03061);
+    border-radius: 3px;
+    border: none;
+    color: white;
+    padding: 10px;
+    width: 100%;
+    font-weight: 600;
+    text-shadow:  box-shadow: 2px 2px 6px 0px rgba(0,0,0,0.3);
+    text-transform: uppercase;
+
+}
+.text button:hover{
+    background: linear-gradient(to left,#f030a7,#f03067,#f03061); 
+}
+@media(max-width: 768px){
+    .grid{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media(max-width: 500px){
+    .grid{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .grid > article{
+        text-align: center;
+    }
+}
+.button p {
+    padding-top: 11px;
+}
+.See{
+    padding-left: 45%;
+    margin-bottom: 40px;
+}
+.See a{
+  position: relative;
+  display: inline-block;
+  padding: 15px 30px;
+  margin-top: 20px;
+  background: #ff2562;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 0.95em;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-align: center;
+}
+.See a:hover{
+   background:#fc00ff;
+}
+.footter{
+    width: 100%;
+    height: 150px;
+    background: black;
+    position: relative;
+}
+.footter img{
+    width: 6%;
+    height: 35%;
+    padding-left: 30px;
+    margin-top: 30px;
+}
+.footter ul{
+    display: inline-block;
+}
+.footter ul li{
+    float: left;
+    text-decoration: none;
+    list-style-type: none;
+    padding-top: 20px;
+    margin: 0 10px;
+}
+.footter ul li a{
+    color: white;
+    text-decoration: none;
+    font-family: serif;
+}
+.footter ul li:hover a{
+    border-bottom: 1px solid #fff;
+}
+.footter p{
+    font-family: serif;
+    color: white;
+    margin-top: 20px;
+    margin-left: 50px;
+
+}
